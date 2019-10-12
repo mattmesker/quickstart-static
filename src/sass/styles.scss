@@ -1,0 +1,112 @@
+@import "reset";
+@import "bourbon/bourbon";
+@import "mixins";
+
+/*** fonts ***/
+
+/*** font styles ***/
+
+@mixin body-text {
+	font-family: $font-stack-system;
+	@include font-size(16px);
+	line-height: 1.4;
+}
+
+/*** colors ***/
+
+$color-black: #000000;
+$color-white: #FFFFFF;
+
+/*** basic styles ***/
+
+body {
+	background-color: $color-white;
+	@include body-text;
+	color: $color-black;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-size-adjust: none;
+  font-feature-settings: "kern";
+}
+
+p { margin: 0 0 1em 0; }
+em { font-style: italic; }
+strong { font-weight: 700; }
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+	&:not([class]) {
+		transition: all 0.25s ease-in-out;
+		&:link,
+		&:visited {
+			color: blue;
+		}
+		&:hover,
+		&:active {
+			color: purple;
+		}
+	}
+}
+
+ol {
+	margin: 0 0 1em 2em;
+	list-style: decimal;
+}
+
+ul {
+	margin: 0 0 1em 2em;
+	list-style: disc;
+}
+
+.visually-hidden {
+	@include hide-visually;
+}
+
+.button {
+	display: inline-block;
+	width: auto;
+	height: 42px;
+	padding: 0 1.5em;
+	background-color: blue;
+	border-radius: 3px;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: 42px;
+	font-weight: 700;
+	color: $color-white;
+	cursor: pointer;
+	transition: all 0.25s ease-in-out;
+	&:hover,
+	&:active {
+		background-color: purple;
+	}
+}
+
+/*** grid ***/
+
+$column: 70px;
+$gutter: 40px;
+$max-width: 1280px;
+
+.container {
+	position: relative;
+	width: 90%;
+	max-width: $max-width;
+	margin: 0 auto;
+}
+
+/*** site header ***/
+
+.site-header {}
+
+/*** site footer ***/
+
+.site-footer {}
+
+/*** site-content ***/
+
+.site-content {
+	background-color: $color-white;
+}

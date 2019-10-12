@@ -1,0 +1,31 @@
+{
+  "name": "quickstart",
+  "version": "1.0.0",
+  "description": "Quickstart",
+  "main": "src/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matt Mesker <hello@mattmesker.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^6.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-rev": "^9.0.0",
+    "gulp-rev-delete-original": "^0.2.3",
+    "gulp-rev-rewrite": "^2.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-terser": "^1.2.0",
+    "gulp-useref": "^3.1.6"
+  },
+  "browserslist": [
+    "defaults"
+  ]
+}
